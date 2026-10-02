@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Gallery - Taniya Sports Wear</title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+    <style>
+
+        .gallery-page {
+            max-width: 1200px;
+            margin: 120px auto 70px;
+            padding: 20px;
+        }
+
+        .gallery-heading {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .gallery-heading p {
+            color: #aaa;
+            font-size: 14px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .gallery-heading h1 {
+            font-size: 46px;
+            margin: 0;
+        }
+
+        .gallery-heading h1 span {
+            color: #aaa;
+        }
+
+        #gallery-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .gallery-item {
+            position: relative;
+            height: 420px;
+            overflow: hidden;
+            border-radius: 15px;
+            background: #151515;
+            text-decoration: none;
+            color: inherit;
+            cursor: pointer;
+}
+        
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.4s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.06);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 25px 20px;
+
+            background: linear-gradient(
+                transparent,
+                rgba(0, 0, 0, 0.9)
+            );
+
+            color: white;
+        }
+
+        .gallery-overlay h3 {
+            margin: 0 0 6px;
+            font-size: 21px;
+        }
+
+        .gallery-overlay p {
+            margin: 0;
+            color: #aaa;
+            text-transform: uppercase;
+            font-size: 13px;
+            letter-spacing: 1px;
+        }
+
+        .loading {
+            text-align: center;
+            color: #aaa;
+            grid-column: 1 / -1;
+        }
+
+        @media (max-width: 900px) {
+
+            #gallery-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+        @media (max-width: 600px) {
+
+            .gallery-page {
+                margin-top: 100px;
+                padding: 15px;
+            }
+
+            .gallery-heading h1 {
+                font-size: 34px;
+            }
+
+            #gallery-container {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .gallery-item {
+                height: 400px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <header class="navbar">
+
+        <div class="logo">
+            <span>T</span>
+            Taniya Sports Wear
+        </div>
+
+        <nav>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="products.html">
+                Products
+            </a>
+
+            <a
+                href="gallery.html"
+                class="active"
+            >
+                Gallery
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </nav>
+
+        <a
+            href="admin/login.html"
+            class="admin-btn"
+        >
+            Admin
+        </a>
+
+    </header>
+
+
+    <main class="gallery-page">
+
+        <div class="gallery-heading">
+
+            <p>
+                TANIYA SPORTS WEAR
+            </p>
+
+            <h1>
+                Our <span>Collection</span>
+            </h1>
+
+        </div>
+
+
+        <div id="gallery-container">
+
+            <p class="loading">
+                Loading gallery...
+            </p>
+
+        </div>
+
+    </main>
+
+
+    <footer>
+
+        <div class="footer-logo">
+            Taniya Sports Wear
+        </div>
+
+        <p>
+            Custom Clothing • Quality Stitching • Your Style
+        </p>
+
+        <div class="footer-links">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="products.html">
+                Products
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </div>
+
+        <p class="copyright">
+            © 2026 Taniya Sports Wear.
+            All rights reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- Supabase -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"
+    ></script>
+
+    <script src="js/supabase.js"></script>
+
+    <script src="js/gallery.js"></script>
+
+</body>
+
+</html>

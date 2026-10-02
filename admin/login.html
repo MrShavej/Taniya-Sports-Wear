@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Login - Taniya Sports Wear</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <style>
+        .login-page {
+            min-height: 80vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 50px 20px;
+        }
+
+        .login-box {
+            width: 100%;
+            max-width: 400px;
+            background: #121212;
+            border: 1px solid #292929;
+            border-radius: 10px;
+            padding: 35px;
+        }
+
+        .login-box h1 {
+            margin-bottom: 8px;
+        }
+
+        .login-box p {
+            color: #777;
+            margin-bottom: 30px;
+        }
+
+        .login-box label {
+            display: block;
+            margin: 15px 0 7px;
+            color: #aaa;
+            font-size: 14px;
+        }
+
+        .login-box input {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 13px;
+            background: #1c1c1c;
+            border: 1px solid #333;
+            color: white;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        .login-box button {
+            width: 100%;
+            padding: 13px;
+            margin-top: 25px;
+            background: white;
+            color: black;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        .login-box button:hover {
+            background: #ddd;
+        }
+
+        #login-message {
+            margin-top: 15px;
+            color: #ff5555;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <div class="logo">
+        <span>T</span>Taniya Sports Wear
+    </div>
+
+    <a href="../index.html" class="admin-btn">
+        Back to Website
+    </a>
+
+</header>
+
+
+<main class="login-page">
+
+    <div class="login-box">
+
+        <h1>Admin Login</h1>
+
+        <p>Login to manage your products.</p>
+
+        <form id="login-form">
+
+            <label>Email</label>
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Admin email"
+                required
+            >
+
+
+            <label>Password</label>
+
+            <input
+                type="password"
+                id="password"
+                placeholder="Password"
+                required
+            >
+
+
+            <button type="submit">
+                Login
+            </button>
+
+        </form>
+
+        <div id="login-message"></div>
+
+    </div>
+
+</main>
+
+
+<footer>
+
+    <div class="footer-logo">
+        Taniya Sports Wear
+    </div>
+
+    <p>
+        Custom Clothing • Quality Stitching • Your Style
+    </p>
+
+    <p class="copyright">
+        © 2026 Taniya Sports Wear
+    </p>
+
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script src="../js/supabase.js"></script>
+
+<script src="../js/admin.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,622 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #0b0b0b;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    width: 100%;
+    height: 75px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 7%;
+
+    background: #0b0b0b;
+
+    border-bottom: 1px solid #222;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: 700;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo span {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #ffffff;
+    color: #000000;
+
+    border-radius: 50%;
+
+    font-weight: 900;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 28px;
+}
+
+.navbar nav a {
+    color: #aaa;
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+.navbar nav a:hover,
+.navbar nav a.active {
+    color: #ffffff;
+}
+
+.admin-btn {
+    border: 1px solid #444;
+
+    padding: 9px 18px;
+
+    border-radius: 6px;
+
+    font-size: 13px;
+
+    transition: 0.3s;
+}
+
+.admin-btn:hover {
+    background: #ffffff;
+    color: #000000;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 650px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 80px 7%;
+
+    background:
+        radial-gradient(
+            circle at 80% 50%,
+            #252525 0%,
+            #0b0b0b 45%
+        );
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.small-title {
+    color: #999;
+
+    font-size: 13px;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(55px, 7vw, 95px);
+
+    line-height: 0.95;
+
+    font-weight: 800;
+
+    letter-spacing: -4px;
+}
+
+.hero h1 span {
+    color: #aaa;
+}
+
+.hero-text {
+    max-width: 500px;
+
+    color: #aaa;
+
+    font-size: 17px;
+
+    margin-top: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+
+    margin-top: 35px;
+}
+
+.primary-btn,
+.whatsapp-btn {
+    padding: 14px 25px;
+
+    border-radius: 6px;
+
+    font-weight: 600;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+.primary-btn {
+    background: #ffffff;
+    color: #000000;
+}
+
+.primary-btn:hover {
+    transform: translateY(-3px);
+}
+
+.whatsapp-btn {
+    background: #1fa855;
+    color: #ffffff;
+}
+
+.whatsapp-btn:hover {
+    transform: translateY(-3px);
+}
+
+
+/* HERO IMAGE */
+
+.hero-image {
+    width: 42%;
+    display: flex;
+    justify-content: center;
+}
+
+.image-box {
+    width: 380px;
+    height: 480px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            145deg,
+            #333,
+            #151515
+        );
+
+    border-radius: 8px;
+
+    border: 1px solid #333;
+
+    box-shadow:
+        0 30px 80px rgba(0,0,0,0.5);
+}
+
+.image-box span {
+    text-align: center;
+
+    font-size: 55px;
+
+    font-weight: 900;
+
+    line-height: 0.9;
+
+    color: #777;
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+.categories,
+.why-us {
+    padding: 100px 7%;
+}
+
+.section-heading {
+    text-align: center;
+
+    margin-bottom: 55px;
+}
+
+.section-heading p {
+    color: #888;
+
+    font-size: 12px;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 10px;
+}
+
+.section-heading h2 {
+    font-size: 45px;
+
+    letter-spacing: -1px;
+}
+
+.section-heading h2 span {
+    color: #888;
+}
+
+
+/* =========================
+   CATEGORY CARDS
+========================= */
+
+.category-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 18px;
+}
+
+.category-card {
+    background: #121212;
+
+    border: 1px solid #252525;
+
+    padding: 30px;
+
+    min-height: 270px;
+
+    border-radius: 8px;
+
+    transition: 0.3s;
+}
+
+.category-card:hover {
+    transform: translateY(-7px);
+
+    border-color: #555;
+
+    background: #171717;
+}
+
+.category-icon {
+    font-size: 38px;
+
+    margin-bottom: 25px;
+}
+
+.category-card h3 {
+    font-size: 21px;
+
+    margin-bottom: 10px;
+}
+
+.category-card p {
+    color: #888;
+
+    font-size: 14px;
+}
+
+.category-card span {
+    display: inline-block;
+
+    margin-top: 25px;
+
+    font-size: 13px;
+
+    color: #ddd;
+}
+
+
+/* =========================
+   WHY US
+========================= */
+
+.why-us {
+    background: #101010;
+}
+
+.features {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.feature {
+    text-align: center;
+
+    padding: 30px 20px;
+}
+
+.feature-icon {
+    font-size: 32px;
+
+    margin-bottom: 20px;
+}
+
+.feature h3 {
+    font-size: 18px;
+
+    margin-bottom: 10px;
+}
+
+.feature p {
+    color: #888;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   CTA
+========================= */
+
+.cta {
+    margin: 80px 7%;
+
+    padding: 60px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    background: #171717;
+
+    border: 1px solid #292929;
+
+    border-radius: 10px;
+}
+
+.cta > div {
+    max-width: 650px;
+}
+
+.cta p:first-child {
+    color: #888;
+
+    font-size: 12px;
+
+    letter-spacing: 3px;
+}
+
+.cta h2 {
+    font-size: 45px;
+
+    margin: 8px 0;
+}
+
+.cta h2 span {
+    color: #888;
+}
+
+.cta div p:last-child {
+    color: #888;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 50px 7%;
+
+    text-align: center;
+
+    border-top: 1px solid #222;
+
+    color: #777;
+}
+
+.footer-logo {
+    color: #ffffff;
+
+    font-size: 20px;
+
+    font-weight: 700;
+
+    margin-bottom: 10px;
+}
+
+.footer-links {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 25px;
+
+    margin: 25px 0;
+}
+
+.footer-links a {
+    font-size: 13px;
+}
+
+.footer-links a:hover {
+    color: #ffffff;
+}
+
+.copyright {
+    font-size: 12px;
+
+    color: #555;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        padding: 0 5%;
+    }
+
+    .navbar nav {
+        display: none;
+    }
+
+    .hero {
+        flex-direction: column;
+
+        text-align: center;
+
+        gap: 50px;
+    }
+
+    .hero-content {
+        max-width: 700px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-image {
+        width: 100%;
+    }
+
+    .category-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .features {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .cta {
+        flex-direction: column;
+
+        text-align: center;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .navbar {
+        height: 65px;
+    }
+
+    .logo {
+        font-size: 16px;
+    }
+
+    .admin-btn {
+        padding: 7px 12px;
+    }
+
+    .hero {
+        padding: 70px 5%;
+    }
+
+    .hero h1 {
+        font-size: 60px;
+
+        letter-spacing: -3px;
+    }
+
+    .hero-text {
+        font-size: 15px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .hero-buttons a {
+        text-align: center;
+    }
+
+    .image-box {
+        width: 280px;
+        height: 350px;
+    }
+
+    .image-box span {
+        font-size: 40px;
+    }
+
+    .categories,
+    .why-us {
+        padding: 70px 5%;
+    }
+
+    .section-heading h2 {
+        font-size: 35px;
+    }
+
+    .category-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+    }
+
+    .cta {
+        margin: 50px 5%;
+
+        padding: 40px 25px;
+    }
+
+    .cta h2 {
+        font-size: 35px;
+    }
+
+    .footer-links {
+        flex-wrap: wrap;
+    }
+}

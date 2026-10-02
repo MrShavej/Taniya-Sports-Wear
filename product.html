@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Product Details - Taniya Sports Wear</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+    .product-details {
+        max-width: 1200px;
+        margin: 110px auto 70px;
+        padding: 30px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 70px;
+        align-items: center;
+    }
+
+    .product-image {
+        width: 100%;
+        height: 600px;
+        object-fit: contain;
+        border-radius: 20px;
+        background: #151515;
+        padding: 15px;
+        box-sizing: border-box;
+    }
+
+    .product-info {
+        padding: 10px;
+    }
+
+    .product-category {
+        display: inline-block;
+        color: #aaa;
+        font-size: 15px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 12px;
+    }
+
+    .product-info h1 {
+        font-size: 46px;
+        line-height: 1.15;
+        margin: 0 0 20px;
+    }
+
+    .product-price {
+        font-size: 32px;
+        font-weight: bold;
+        margin: 20px 0 30px;
+    }
+
+    .product-info p {
+        margin: 15px 0;
+        font-size: 17px;
+    }
+
+    .product-description {
+        color: #aaa;
+        line-height: 1.7;
+        margin-top: 25px !important;
+    }
+
+    /* STOCK STATUS */
+
+    #product-stock.stock-available {
+        color: #25D366 !important;
+        font-weight: bold;
+    }
+
+    #product-stock.stock-unavailable {
+        color: #ff4d4d !important;
+        font-weight: bold;
+    }
+
+    .order-btn {
+        display: inline-block;
+        margin-top: 25px;
+        padding: 15px 28px;
+        background: #25D366;
+        color: white;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: bold;
+        font-size: 16px;
+        transition: 0.3s;
+    }
+
+    .order-btn:hover {
+        transform: translateY(-2px);
+        opacity: 0.9;
+    }
+
+    .back-btn {
+        display: inline-block;
+        margin-top: 20px;
+        color: #aaa;
+        text-decoration: none;
+    }
+
+    .back-btn:hover {
+        color: white;
+    }
+
+    #loading {
+        text-align: center;
+        margin-top: 150px;
+    }
+
+    @media (max-width: 768px) {
+
+        .product-details {
+            grid-template-columns: 1fr;
+            gap: 30px;
+            margin-top: 90px;
+            padding: 20px;
+        }
+
+        .product-image {
+            height: 400px;
+        }
+
+        .product-info h1 {
+            font-size: 32px;
+        }
+
+        .product-price {
+            font-size: 27px;
+        }
+
+        .order-btn {
+            width: 100%;
+            text-align: center;
+            box-sizing: border-box;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+    <div id="loading">
+        <h2>Loading Product...</h2>
+    </div>
+
+    <section class="product-details" id="product-details" style="display:none;">
+
+        <div>
+            <img id="product-image" class="product-image" src="" alt="Product">
+        </div>
+
+        <div class="product-info">
+
+            <div class="product-category" id="product-category"></div>
+
+            <h1 id="product-name"></h1>
+
+            <div class="product-price">
+                ₹<span id="product-price"></span>
+            </div>
+
+            <p>
+                <strong>Available Sizes:</strong>
+                <span id="product-sizes"></span>
+            </p>
+
+            <p>
+                <strong>Stock:</strong>
+                <span id="product-stock"></span>
+            </p>
+
+            <p class="product-description" id="product-description"></p>
+
+            <a id="whatsapp-order" class="order-btn" href="#" target="_blank">
+                Order on WhatsApp
+            </a>
+
+            <br>
+
+            <a href="products.html" class="back-btn">
+                ← Back to Products
+            </a>
+
+        </div>
+
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/supabase.js"></script>
+    <script src="js/product.js"></script>
+
+</body>
+
+</html>
